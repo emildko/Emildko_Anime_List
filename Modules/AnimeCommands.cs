@@ -85,10 +85,12 @@ namespace Emildko_Anime_List.Modules
             {
                 var sb = new StringBuilder();
 
-
+                int r = rnd.Next(anime.Count - 1);
                 sb.AppendLine("Warning, you've chosen random, I've seen a lot of trash and you might see some too, I take no responsibility for what you might see");
                 sb.AppendLine("But as you're probably a degenerate like me, here you go:");
-                sb.AppendLine(anime[rnd.Next(anime6.Count - 1)].Item1);
+                sb.AppendLine(anime[r].Item1);
+                sb.AppendLine(" ");
+                sb.Append("https://myanimelist.net/anime/" + anime[r].Item3);
 
                 await ReplyAsync(sb.ToString());
             }
