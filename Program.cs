@@ -30,7 +30,7 @@ namespace Emildko_Anime_List
                 services.GetRequiredService<CommandService>().Log += LogAsync;
 
                 // this is where we get the Token value from the configuration file, and start the bot
-                await client.LoginAsync(TokenType.Bot, "ODc2MDgzMDk0NzQwOTM4ODIy.YRe59g.-vFyzFa0kb3EuMbVptJEQziTdXs");
+                await client.LoginAsync(TokenType.Bot, "token");
                 await client.StartAsync();
 
                 // we get the CommandHandler class here and call the InitializeAsync method to start things up for the CommandHandler service
